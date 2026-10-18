@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="690" viewBox="0 0 1280 690" fill="none" role="img" aria-labelledby="title desc">
+<title id="title">Erik Tran — Data science, with a practical point of view.</title>
+<desc id="desc">William and Mary Data Science, class of 2028. Interests: machine learning, fintech, consulting. Projects: OptionLab, options analytics; PlatePredict, calorie prediction with six regression model families. Languages: Python, R, SQL, Bash. Tools: pandas, NumPy, scikit-learn, PyTorch, Tableau, Excel, Stata.</desc>
+<style>
+.orbit { transform-origin: 1090px 146px; animation: orbit-turn 80s linear infinite; }
+.orbit-two { animation-duration: 105s; animation-direction: reverse; }
+.orbit-three { animation-duration: 130s; }
+.building-dot { transform-origin: 73px 577px; animation: building-pulse 3s ease-in-out infinite; }
+.building-halo { transform-origin: 73px 577px; animation: halo-pulse 3s ease-in-out infinite; }
+@keyframes orbit-turn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes building-pulse { 0%,100% { opacity: .65; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.2); } }
+@keyframes halo-pulse { 0%,100% { opacity: .08; transform: scale(.7); } 50% { opacity: .25; transform: scale(1.15); } }
+@media (prefers-reduced-motion: reduce) { .orbit, .building-dot, .building-halo { animation: none; } }
+</style>
+<defs>
+<pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" stroke="#a9b9ed" stroke-opacity=".035"/></pattern>
+<pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#a9b9ed" opacity=".18"/></pattern>
+<radialGradient id="glow"><stop stop-color="#283957" stop-opacity=".6"/><stop offset="1" stop-color="#0b0d12" stop-opacity="0"/></radialGradient>
+<clipPath id="clip"><rect x="1" y="1" width="1278" height="688" rx="18"/></clipPath>
+</defs>
+<g clip-path="url(#clip)">
+<rect width="1280" height="690" fill="#0b0d12"/>
+<rect width="1280" height="690" fill="url(#grid)"/>
+<ellipse cx="1090" cy="155" rx="440" ry="310" fill="url(#glow)"/>
+<rect x="850" y="0" width="430" height="300" fill="url(#dots)"/>
+<g stroke="#a9b9ed" stroke-opacity=".18">
+<g class="orbit"><ellipse cx="1090" cy="146" rx="245" ry="83" transform="rotate(-32 1090 146)"/></g>
+<g class="orbit orbit-two"><ellipse cx="1090" cy="146" rx="235" ry="96" transform="rotate(36 1090 146)"/></g>
+<g class="orbit orbit-three"><ellipse cx="1090" cy="146" rx="190" ry="110" transform="rotate(78 1090 146)"/></g>
+</g>
+<circle cx="1000" cy="117" r="4" fill="#b6c5f4"/>
+<circle cx="1188" cy="200" r="3" fill="#a9b9ed"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="44" y="75" font-size="49" letter-spacing="-1.8" fill="#f1f3f8">Erik Tran<tspan fill="#a9b9ed">.</tspan></text>
+<text x="46" y="110" font-size="19" fill="#9da7b8">Data Science @ William &amp; Mary · Class of 2028</text>
+</g>
+<path d="M44 140H1236" stroke="#303746"/>
+<g font-family="monospace" font-size="18">
+<g fill="#8390a6"><text x="46" y="186">interests</text><text x="46" y="228">languages</text><text x="46" y="270">tools</text></g>
+<g fill="#e0e5ee"><text x="202" y="186">AI / ML · fintech · consulting</text><text x="202" y="228">Python · R · SQL · Bash</text><text x="202" y="270">pandas · NumPy · scikit-learn · PyTorch</text><text x="202" y="301">Tableau · Excel · Stata</text></g>
+</g>
+<path d="M44 338H1236" stroke="#303746"/>
+<path d="M44 338H108" stroke="#a9b9ed" stroke-width="2"/>
+<g font-family="monospace" font-size="11" letter-spacing="1.6" fill="#939fb6"><text x="46" y="370">IDEAS, PUT TO WORK</text><text x="1235" y="370" text-anchor="end">DATA → MODELS → INSIGHT</text></g>
+<g fill="#10141d" stroke="#303a4c"><rect x="44" y="390" width="584" height="214" rx="10"/><rect x="648" y="390" width="588" height="214" rx="10"/></g>
+<g font-family="monospace" font-size="11" letter-spacing="1" fill="#a6b5d2"><text x="68" y="420">FINANCIAL ANALYTICS</text><text x="672" y="420">APPLIED MACHINE LEARNING</text></g>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="68" y="465" font-size="31" fill="#eef1f7">OptionLab</text><text x="672" y="465" font-size="31" fill="#eef1f7">PlatePredict</text>
+<text x="68" y="502" font-size="17" fill="#a5afc1">Option pricing, Greeks, and implied volatility.</text><text x="672" y="502" font-size="17" fill="#a5afc1">Calorie prediction from nutritional features.</text>
+</g>
+<g font-family="monospace" font-size="14" fill="#b0bed7"><text x="68" y="533">Black–Scholes · sensitivity analysis</text><text x="672" y="533">6 regression model families · validation</text></g>
+<path d="M68 552H604M672 552H1212" stroke="#293244"/>
+<circle class="building-halo" cx="73" cy="577" r="8" fill="#b6c5f4" opacity=".15"/>
+<circle class="building-dot" cx="73" cy="577" r="3" fill="#b6c5f4"/>
+<path d="M672 575L677 580L685 570" stroke="#a9b9ed" stroke-width="1.7"/>
+<g font-family="monospace" font-size="11" letter-spacing="1" fill="#a9b9ed"><text x="86" y="581">CURRENTLY BUILDING</text><text x="695" y="581">COMPLETED PROJECT</text></g>
+<!-- Small project illustrations echo financial curves and model comparisons. -->
+<g stroke="#a9b9ed" stroke-width="2" stroke-linecap="round"><path d="M550 464H599M550 464V417" stroke-opacity=".25"/><path d="M555 457C572 456 581 446 596 421"/><path d="M1155 457H1163M1155 444H1177M1155 431H1190M1155 418H1204"/></g>
+<g font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#8d9ab0"><text x="46" y="650">Turning questions into useful work.</text></g>
+<g font-family="monospace" font-size="11" letter-spacing="1" fill="#a9b9ed"><text x="1234" y="650" text-anchor="end">ANALYZE / UNDERSTAND / COMMUNICATE</text></g>
+</g>
+<rect x="1" y="1" width="1278" height="688" rx="18" stroke="#303746"/>
+</svg>
