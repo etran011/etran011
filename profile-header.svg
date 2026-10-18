@@ -10,7 +10,7 @@
 @keyframes orbit-turn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 @keyframes building-pulse { 0%,100% { opacity: .65; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.2); } }
 @keyframes halo-pulse { 0%,100% { opacity: .08; transform: scale(.7); } 50% { opacity: .25; transform: scale(1.15); } }
-@media (prefers-reduced-motion: reduce) { .orbit, .building-dot, .building-halo { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .traveling-dot { display: none; } .orbit, .building-dot, .building-halo { animation: none; } }
 </style>
 <defs>
 <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" stroke="#a9b9ed" stroke-opacity=".035"/></pattern>
@@ -24,12 +24,20 @@
 <ellipse cx="1090" cy="155" rx="440" ry="310" fill="url(#glow)"/>
 <rect x="850" y="0" width="430" height="300" fill="url(#dots)"/>
 <g stroke="#a9b9ed" stroke-opacity=".18">
-<g class="orbit"><ellipse cx="1090" cy="146" rx="245" ry="83" transform="rotate(-32 1090 146)"/></g>
-<g class="orbit orbit-two"><ellipse cx="1090" cy="146" rx="235" ry="96" transform="rotate(36 1090 146)"/></g>
+<g class="orbit"><g transform="rotate(-32 1090 146)">
+<ellipse cx="1090" cy="146" rx="245" ry="83"/>
+<circle class="traveling-dot" r="4" fill="#b6c5f4" stroke="none">
+<animateMotion dur="24s" repeatCount="indefinite" path="M 1090 63 A 245 83 0 1 1 1090 229 A 245 83 0 1 1 1090 63"/>
+</circle>
+</g></g>
+<g class="orbit orbit-two"><g transform="rotate(36 1090 146)">
+<ellipse cx="1090" cy="146" rx="235" ry="96"/>
+<circle class="traveling-dot" r="3" fill="#a9b9ed" stroke="none">
+<animateMotion dur="31s" repeatCount="indefinite" path="M 1090 50 A 235 96 0 1 1 1090 242 A 235 96 0 1 1 1090 50"/>
+</circle>
+</g></g>
 <g class="orbit orbit-three"><ellipse cx="1090" cy="146" rx="190" ry="110" transform="rotate(78 1090 146)"/></g>
 </g>
-<circle cx="1000" cy="117" r="4" fill="#b6c5f4"/>
-<circle cx="1188" cy="200" r="3" fill="#a9b9ed"/>
 <g font-family="Arial, Helvetica, sans-serif">
 <text x="44" y="75" font-size="49" letter-spacing="-1.8" fill="#f1f3f8">Erik Tran<tspan fill="#a9b9ed">.</tspan></text>
 <text x="46" y="110" font-size="19" fill="#9da7b8">Data Science @ William &amp; Mary · Class of 2028</text>
