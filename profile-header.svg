@@ -2,15 +2,15 @@
 <title id="title">Erik Tran — Data science, with a practical point of view.</title>
 <desc id="desc">William and Mary Data Science, class of 2028. Interests: machine learning, fintech, consulting. Projects: OptionLab, options analytics; PlatePredict, calorie prediction with six regression model families. Languages: Python, R, SQL, Bash. Tools: pandas, NumPy, scikit-learn, PyTorch, Tableau, Excel, Stata.</desc>
 <style>
-.orbit { transform-origin: 1090px 146px; animation: orbit-turn 80s linear infinite; }
-.orbit-two { animation-duration: 105s; animation-direction: reverse; }
-.orbit-three { animation-duration: 130s; }
-.building-dot { transform-origin: 73px 577px; animation: building-pulse 3s ease-in-out infinite; }
-.building-halo { transform-origin: 73px 577px; animation: halo-pulse 3s ease-in-out infinite; }
-@keyframes orbit-turn { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-@keyframes building-pulse { 0%,100% { opacity: .65; transform: scale(.9); } 50% { opacity: 1; transform: scale(1.2); } }
-@keyframes halo-pulse { 0%,100% { opacity: .08; transform: scale(.7); } 50% { opacity: .25; transform: scale(1.15); } }
-@media (prefers-reduced-motion: reduce) { .traveling-dot { display: none; } .orbit, .building-dot, .building-halo { animation: none; } }
+.orbit-trail { stroke-dasharray: 16 84; animation: trail-flow 16s linear infinite; }
+.trail-two { animation-duration: 21s; animation-direction: reverse; }
+.trail-three { animation-duration: 27s; }
+@keyframes trail-flow { from { stroke-dashoffset: 0; } to { stroke-dashoffset: -100; } }
+.building-dot { animation: building-pulse 3s ease-in-out infinite; }
+.building-halo { animation: halo-pulse 3s ease-in-out infinite; }
+@keyframes building-pulse { 0%,100% { opacity: .5; } 50% { opacity: 1; } }
+@keyframes halo-pulse { 0%,100% { opacity: .05; } 50% { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { .orbit-trail, .building-dot, .building-halo { animation: none; } }
 </style>
 <defs>
 <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse"><path d="M44 0H0V44" stroke="#a9b9ed" stroke-opacity=".035"/></pattern>
@@ -23,20 +23,13 @@
 <rect width="1280" height="690" fill="url(#grid)"/>
 <ellipse cx="1090" cy="155" rx="440" ry="310" fill="url(#glow)"/>
 <rect x="850" y="0" width="430" height="300" fill="url(#dots)"/>
-<g stroke="#a9b9ed" stroke-opacity=".18">
-<g class="orbit"><g transform="rotate(-32 1090 146)">
-<ellipse cx="1090" cy="146" rx="245" ry="83"/>
-<circle class="traveling-dot" r="4" fill="#b6c5f4" stroke="none">
-<animateMotion dur="24s" repeatCount="indefinite" path="M 1090 63 A 245 83 0 1 1 1090 229 A 245 83 0 1 1 1090 63"/>
-</circle>
-</g></g>
-<g class="orbit orbit-two"><g transform="rotate(36 1090 146)">
-<ellipse cx="1090" cy="146" rx="235" ry="96"/>
-<circle class="traveling-dot" r="3" fill="#a9b9ed" stroke="none">
-<animateMotion dur="31s" repeatCount="indefinite" path="M 1090 50 A 235 96 0 1 1 1090 242 A 235 96 0 1 1 1090 50"/>
-</circle>
-</g></g>
-<g class="orbit orbit-three"><ellipse cx="1090" cy="146" rx="190" ry="110" transform="rotate(78 1090 146)"/></g>
+<g fill="none">
+<ellipse cx="1090" cy="146" rx="245" ry="83" transform="rotate(-32 1090 146)" stroke="#a9b9ed" stroke-opacity=".13"/>
+<ellipse cx="1090" cy="146" rx="245" ry="83" transform="rotate(-32 1090 146)" pathLength="100" class="orbit-trail" stroke="#b6c5f4" stroke-opacity=".65" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="1090" cy="146" rx="235" ry="96" transform="rotate(36 1090 146)" stroke="#a9b9ed" stroke-opacity=".13"/>
+<ellipse cx="1090" cy="146" rx="235" ry="96" transform="rotate(36 1090 146)" pathLength="100" class="orbit-trail trail-two" stroke="#b6c5f4" stroke-opacity=".65" stroke-width="1.5" stroke-linecap="round"/>
+<ellipse cx="1090" cy="146" rx="190" ry="110" transform="rotate(78 1090 146)" stroke="#a9b9ed" stroke-opacity=".13"/>
+<ellipse cx="1090" cy="146" rx="190" ry="110" transform="rotate(78 1090 146)" pathLength="100" class="orbit-trail trail-three" stroke="#b6c5f4" stroke-opacity=".65" stroke-width="1.5" stroke-linecap="round"/>
 </g>
 <g font-family="Arial, Helvetica, sans-serif">
 <text x="44" y="75" font-size="49" letter-spacing="-1.8" fill="#f1f3f8">Erik Tran<tspan fill="#a9b9ed">.</tspan></text>
